@@ -1,7 +1,7 @@
 # Sistema de Compra de Jogos
 
 
-O objetivo do projeto é construir um **sistema de compras**. O sistema consiste de um conjunto de funcionalidades: **cadastrar usuário**, **remover usuários**, **editar usuário**, **ver carrinho**, **adicionar jogo**, **remover jogo**, **buscar jogo**, **promoções**, **consultar usuário** e **ranking**. O sistema possibilita o cadastro de dois usuários, o cliente que fará funções gerais que não envolvam configurar o sistema e o administrador, sendo este responável por gerenciar toda a plataforma. 
+O objetivo do projeto é construir um **sistema de compras**. O sistema consiste de um conjunto de funcionalidades: **cadastrar usuário**, **remover usuários**, **editar usuário**, **ver carrinho**, **adicionar jogo**, **remover jogo**, **buscar jogo**, **promoções**, **consultar usuário** e **ranking**. O sistema possibilita o cadastro de dois usuários, o cliente que fará funções gerais que não envolvam configurar o sistema e o administrador, sendo este responsável por gerenciar toda a plataforma. 
 
 
 *Funcionalidades*
