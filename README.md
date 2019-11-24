@@ -8,17 +8,17 @@ O objetivo do projeto é construir um **sistema para gerenciamento de plataforma
 
 **1 - Cadastrar usuário:** permite criar um usuário.
 
-**2 - Remover usuário:** função que permite ao administrador remover o usuário do sistema.
+**2 - Remover usuário:** função que permite o administrador remover o usuário do sistema.
 
-**3 - Editar usuário:** permite ao administrador editar configurações de um cliente.
+**3 - Editar usuário:** permite o administrador editar configurações de um cliente.
 
-**4 - Gerenciar patrocinadores:** permite ao permite ao administrador gerenciar os patrocinadores.
+**4 - Gerenciar patrocinadores:** função que permite o administrador gerenciar os patrocinadores.
 
 **5 - Adicionar jogo:** disponível para administradores, permitindo que estes adicionem jogos na plataforma.
 
 **6 - Remover jogo:** disponível para administradores, permitindo que estes removam jogos da plataforma.
 
-**7 - Buscar jogo:** funcionalidade que permite ao administrador buscar algum jogo no sistema.
+**7 - Buscar jogo:** funcionalidade que permite o administrador buscar algum jogo no sistema.
 
 **8 - Promoções:** permite que o administrador gerencie e adicione novas promoções. 
 
