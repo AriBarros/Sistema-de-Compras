@@ -66,9 +66,15 @@ public class Main {
 					break;
 				
 					
-				case 3:
+				case 3: //FIXAR
 					
 					cliente.editarCliente();
+					
+					break;
+					
+				case 4:
+					
+					cliente.buscarCliente();
 					
 					break;
 					
@@ -97,8 +103,8 @@ public class Main {
 		
 		System.out.println("1 - Adicionar Cliente"); //ok
 		System.out.println("2 - Remover cliente"); //ok
-		System.out.println("3 - Editar cliente" ); 
-		System.out.println("4 - Consultar cliente"); 
+		System.out.println("3 - Editar cliente" ); //fixar
+		System.out.println("4 - Consultar cliente"); //ok
 		System.out.println("5 - Adicionar jogo na plataforma");
 		System.out.println("6 - Remover jogo da plataforma");
 		//editar jogo na plataforma

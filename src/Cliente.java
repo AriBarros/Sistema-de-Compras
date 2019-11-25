@@ -14,12 +14,10 @@ public class Cliente extends Usuario {
 	
 	//ArrayList listaClientes = new ArrayList();
 	List<Usuario> listaUsuarios = new ArrayList<>();
-	Usuario usuario = new Usuario();
 	
 	public void criarCliente() {
 		
-	
-		//Usuario usuario = new Usuario();
+		Usuario usuario = new Usuario();
 		
 		System.out.println("\nInsira os dados do cliente\n");
 		
@@ -110,7 +108,7 @@ public class Cliente extends Usuario {
 		numero = input.nextInt();
 		input.nextLine();
 		
-		condicao = usuario.buscarUsuario(listaUsuarios, numero);
+		condicao = buscarUsuario(listaUsuarios, numero);
 		
 		if(condicao == -1) return;
 		
@@ -132,6 +130,49 @@ public class Cliente extends Usuario {
 		}
 		else {
 			System.out.println("Opção inválida!");
+		}
+		
+		
+	}
+	
+	
+	//VERIFICAR CONDIÇÃO DO RETURN 
+	public void buscarCliente() {
+		
+		int opcao, numero, indice;
+		
+		System.out.println("Digite a opção que deseja");
+		
+		System.out.println("1 - Ver todos os clientes");
+		System.out.println("2 - Consultar cliente por índice");
+		
+		
+		opcao = input.nextInt();
+		input.nextLine();
+		
+		if(opcao == 1) {
+			
+			for(int i = 0; i<listaUsuarios.size(); i++) {
+				System.out.println(listaUsuarios.get(i).toString());
+			}
+			
+		}
+		else if(opcao == 2) {
+			
+			System.out.println("Digite o índice do cliente");
+			
+			numero = input.nextInt();
+			input.nextLine();
+			
+			indice = buscarUsuario(listaUsuarios, numero);
+			if(indice == -1) return;
+			
+			
+			System.out.println(listaUsuarios.get(indice).toString());
+			
+		}
+		else {
+			System.out.println("Opção inválida");
 		}
 		
 		
