@@ -78,6 +78,17 @@ public class Main {
 					
 					break;
 					
+				case 5:
+					
+					
+					
+					break;
+					
+				case 6:
+					
+					
+					break;
+					
 				case 0:
 					
 					System.exit(0);

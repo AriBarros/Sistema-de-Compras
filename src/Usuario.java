@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Usuario {
 	
-	public int id = 0;
+	public int id;
 	public String nome;
 	public String senha;
 	public String cpf;
