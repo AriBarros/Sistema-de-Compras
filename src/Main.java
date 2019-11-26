@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -5,13 +7,18 @@ public class Main {
 	static Scanner input = new Scanner(System.in);
 	static int opcaoAdministrador, opcao;
 	static String login, senha;
+	static int idJogo = 0;
 
 	public static void main(String[] args) {
-		
 		
 		Cliente cliente = new Cliente();
 		
 		Usuario usuario = new Usuario();
+		
+		Jogo jogo = new Jogo();
+		
+		List<Jogo> listaJogos= new ArrayList<>();
+		
 		
 		do {
 			
@@ -80,12 +87,26 @@ public class Main {
 					
 				case 5:
 					
+					jogo.adicionarJogo();
 					
+					jogo.setId(idJogo);
+					
+					listaJogos.add(jogo);
+					
+					idJogo++;
+					
+					
+					for(int i = 0; i<listaJogos.size(); i++) {
+						System.out.println(listaJogos.get(i).toString());
+					}
 					
 					break;
 					
 				case 6:
 					
+					//jogo.removerJogo(listaJogos);
+					
+					//listaJogos.remove();
 					
 					break;
 					
@@ -116,7 +137,7 @@ public class Main {
 		System.out.println("2 - Remover cliente"); //ok
 		System.out.println("3 - Editar cliente" ); //ok
 		System.out.println("4 - Consultar cliente"); //ok
-		System.out.println("5 - Adicionar jogo na plataforma");
+		System.out.println("5 - Adicionar jogo na plataforma"); //ok
 		System.out.println("6 - Remover jogo da plataforma");
 		System.out.println("7 - Editar jogo da plataforma");
 		System.out.println("8 - Buscar jogo na plataforma");

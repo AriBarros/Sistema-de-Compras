@@ -135,9 +135,7 @@ public class Usuario {
 		
 	}
 	
-	
-	
-	
+
 	
 	// VER FORMATAÇÃO 
 	//Polimorfismo, sobrescrita
@@ -159,7 +157,7 @@ public class Usuario {
 	}
 
 	public void setId(int id) {
-		this.id = id++;
+		this.id = id;
 	}
 
 	public String getNome() {
