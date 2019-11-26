@@ -230,7 +230,7 @@ public class Main {
 		System.out.println("6 - Remover jogo da plataforma"); //ok //ok
 		System.out.println("7 - Buscar jogo na plataforma"); //ok //ok
 		System.out.println("8 - Gerenciar promoções");	
-		System.out.println("9 - Gerenciar ranking de jogos");
+		System.out.println("9 - Gerenciar ranking de jogos"); //ok
 		System.out.println("10 - Gerenciar patrocinadores"); //ok
 		System.out.println("0 - Sair\n");
 		
