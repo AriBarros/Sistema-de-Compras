@@ -1,4 +1,6 @@
 
-public class Promocoes {
+public class Promocoes extends Jogo {
 
+	
+	
 }

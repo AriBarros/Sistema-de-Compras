@@ -118,10 +118,11 @@ public class Main {
 		System.out.println("4 - Consultar cliente"); //ok
 		System.out.println("5 - Adicionar jogo na plataforma");
 		System.out.println("6 - Remover jogo da plataforma");
-		//editar jogo na plataforma
-		System.out.println("7 - Buscar jogo na plataforma");
-		System.out.println("8 - Gerenciar promoções");
-		System.out.println("9 - Gerenciar ranking de jogos");
+		System.out.println("7 - Editar jogo da plataforma");
+		System.out.println("8 - Buscar jogo na plataforma");
+		System.out.println("9 - Gerenciar promoções");
+		System.out.println("10 - Gerenciar ranking de jogos");
+		System.out.println("11 - Gerenciar patrocinadores");
 		System.out.println("0 - Sair\n");
 		
 	}
