@@ -18,12 +18,10 @@ O objetivo do projeto é construir um **sistema para gerenciamento de plataforma
 
 **6 - Remover jogo:** disponível para administradores, permitindo que estes removam jogos da plataforma.
 
-**7 - Editar jogo:** função que permite o administrador editar informações de um jogo.
+**7 - Buscar jogo:** funcionalidade que permite o administrador buscar algum jogo no sistema.
 
-**8 - Buscar jogo:** funcionalidade que permite o administrador buscar algum jogo no sistema.
+**8 - Promoções:** permite que o administrador gerencie e adicione novas promoções. 
 
-**9 - Promoções:** permite que o administrador gerencie e adicione novas promoções. 
+**9 - Consultar usuário:** permite que o administrador do sistema consulte/busque um usuário cadastrado no sistema.
 
-**10 - Consultar usuário:** permite que o administrador do sistema consulte/busque um usuário cadastrado no sistema.
-
-**11 - Ranking:** funcionalidade que permite o administrador editar o ranking de jogos.
+**10 - Ranking:** funcionalidade que permite o administrador editar o ranking de jogos.
