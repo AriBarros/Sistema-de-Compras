@@ -8,8 +8,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Funcionalidades funcionalidades = new Funcionalidades();
-		Cliente cliente= new Cliente();
+		
+		Cliente cliente = new Cliente();
 		
 		Usuario usuario = new Usuario();
 		
@@ -114,7 +114,7 @@ public class Main {
 		
 		System.out.println("1 - Adicionar Cliente"); //ok
 		System.out.println("2 - Remover cliente"); //ok
-		System.out.println("3 - Editar cliente" ); //fixar
+		System.out.println("3 - Editar cliente" ); //ok
 		System.out.println("4 - Consultar cliente"); //ok
 		System.out.println("5 - Adicionar jogo na plataforma");
 		System.out.println("6 - Remover jogo da plataforma");

@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Usuario {
 	
-	public int id;
-	public String nome;
-	public String senha;
-	public String cpf;
-	public String email;
-	public int idade;
+	private int id = 0;
+	private String nome;
+	private String senha;
+	private String cpf;
+	private String email;
+	private int idade;
 	
 	static Scanner input = new Scanner(System.in);
 	
@@ -31,7 +31,6 @@ public class Usuario {
 		return false;
 	}
 	
-	//VERIFICAR CONDIÇÃO PARA NÃO ENCONTRAR CLIENTE COM ÍNDICE INDICADO
 	public int buscarUsuario(List<Usuario> listaUsuarios, int numero) {
 		
 		int i, flag = 0;
@@ -139,6 +138,7 @@ public class Usuario {
 	
 	
 	
+	
 	// VER FORMATAÇÃO 
 	//Polimorfismo, sobrescrita
 	@Override
@@ -159,7 +159,7 @@ public class Usuario {
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id = id++;
 	}
 
 	public String getNome() {

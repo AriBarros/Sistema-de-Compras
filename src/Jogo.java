@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public abstract class Jogo {
+public class Jogo {
 
 	private String nome;
 	private String descricao;
@@ -10,26 +10,21 @@ public abstract class Jogo {
 	private double preco;
 	
 	Scanner input = new Scanner(System.in);
-	List<Jogo> listaJogos= new ArrayList<>();
-
+	
 	
 	public void adicionarJogo() {
 		
-		//Jogo jogo = new Jogo();
-		
 		System.out.println("Digite o nome do jogo");
-		nome = input.nextLine();
+		this.setNome(input.nextLine());
 		
 		System.out.println("Escreva a descrição do jogo");
-		descricao = input.nextLine();
+		this.setDescricao(input.nextLine());
 		
 		System.out.println("Escreva o gênero do jogo");
-		genero = input.nextLine();
+		this.setGenero(input.nextLine());
 		
 		System.out.println("Digite o preço do jogo");
-		preco = input.nextDouble();
-		
-		//listaJogos.add(jogo);		
+		this.setPreco(input.nextDouble());
 	
 	}
 	
@@ -42,5 +37,40 @@ public abstract class Jogo {
 		
 		
 	}
+	
+	
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
 
 }

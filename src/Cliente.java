@@ -6,7 +6,8 @@ public class Cliente extends Usuario {
 	
 	Scanner input = new Scanner(System.in);
 	
-	private double saldo; // ver melhor se interessa para colocar no programa
+	private int idCliente = 0;
+	
 	
 	//podemos usar o recurso de Generics para restringir as listas a um determinado tipo de objetos
 	//ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
@@ -22,27 +23,27 @@ public class Cliente extends Usuario {
 		System.out.println("\nInsira os dados do cliente\n");
 		
 		System.out.println("Digite o nome");
-		usuario.nome = input.nextLine();
+		usuario.setNome(input.nextLine());
 		
 		System.out.println("Digite a senha");
-		usuario.senha = input.nextLine();
+		usuario.setSenha(input.nextLine()); 
 		
 		System.out.println("Digite o cpf");
-		usuario.cpf = input.nextLine();
+		usuario.setCpf(input.nextLine());
 		
 		System.out.println("Digite o email");
-		usuario.email = input.nextLine();
+		usuario.setEmail(input.nextLine());
 		
 		System.out.println("Digite a idade");
-		usuario.idade = input.nextInt();
-		
-		//System.out.println("Digite o saldo do cliente");
+		usuario.setIdade(input.nextInt()); 
 		
 		input.nextLine();
 		
 		listaUsuarios.add(usuario);
 		
-		usuario.id = id++;
+		usuario.setId(idCliente);
+		
+		idCliente++;
 		
 		for(int i = 0; i<listaUsuarios.size(); i++) {
 			System.out.println(listaUsuarios.get(i).toString());
@@ -51,6 +52,8 @@ public class Cliente extends Usuario {
 		
 		
 	}
+	
+	
 	
 	
 	public void removerCliente() {
