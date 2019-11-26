@@ -121,8 +121,7 @@ public class Usuario {
 			
 			System.out.println("Digite a idade do cliente");
 			
-			int idade = input.nextInt();
-			input.nextLine();
+			int idade = TratamentoExcecao.lerInteiro();
 			
 			setIdade(idade);
 			

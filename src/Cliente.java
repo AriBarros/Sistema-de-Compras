@@ -8,7 +8,6 @@ public class Cliente extends Usuario {
 	
 	private int idCliente = 0;
 	
-	
 	//podemos usar o recurso de Generics para restringir as listas a um determinado tipo de objetos
 	//ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
 	
@@ -36,10 +35,9 @@ public class Cliente extends Usuario {
 		usuario.setEmail(input.nextLine());
 		
 		System.out.println("Digite a idade");
-		usuario.setIdade(input.nextInt()); 
+		usuario.setIdade(TratamentoExcecao.lerInteiro()); 
 		
-		input.nextLine();
-		
+
 		listaUsuarios.add(usuario);
 		
 		usuario.setId(idCliente);
@@ -61,8 +59,7 @@ public class Cliente extends Usuario {
 		
 		System.out.println("Digite o indice do cliente que deseja remover");
 		
-		int indice = input.nextInt();
-		input.nextLine();
+		int indice = TratamentoExcecao.lerInteiro();
 		
 		if(listaUsuarios.isEmpty()) {
 			System.out.println("Nenhum cliente cadastrado");
@@ -109,8 +106,7 @@ public class Cliente extends Usuario {
 		
 		System.out.println("Digite o índice do cliente que deseja fazer modificações");
 		
-		numero = input.nextInt();
-		input.nextLine();
+		numero = TratamentoExcecao.lerInteiro();
 		
 		condicao = buscarUsuario(listaUsuarios, numero);
 		
@@ -151,8 +147,7 @@ public class Cliente extends Usuario {
 		System.out.println("2 - Consultar cliente por índice");
 		
 		
-		opcao = input.nextInt();
-		input.nextLine();
+		opcao = TratamentoExcecao.lerInteiro();
 		
 		if(opcao == 1) {
 			
@@ -165,8 +160,7 @@ public class Cliente extends Usuario {
 			
 			System.out.println("Digite o índice do cliente");
 			
-			numero = input.nextInt();
-			input.nextLine();
+			numero = TratamentoExcecao.lerInteiro();
 			
 			indice = buscarUsuario(listaUsuarios, numero);
 			if(indice == -1) return;

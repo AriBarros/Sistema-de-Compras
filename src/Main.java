@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	
 	static Scanner input = new Scanner(System.in);
-	static int opcaoAdministrador, opcao;
+	static int opcaoAdministrador, opcao, opcaoPatrocinador;
 	static String login, senha;
 	static int idJogo = 0;
 
@@ -54,8 +54,7 @@ public class Main {
 			
 			menu();
 			
-			opcao = input.nextInt();
-			input.nextLine();
+			opcao = TratamentoExcecao.lerInteiro();
 			
 			switch(opcao) {
 			
@@ -90,7 +89,7 @@ public class Main {
 				case 5:
 					
 					
-					jogo.adicionarJogo();
+					jogo.adicionar();
 										
 					listaJogos.add(jogo);
 					
@@ -108,7 +107,7 @@ public class Main {
 					
 				case 6:
 					
-					jogo.removerJogo(listaJogos);
+					jogo.remover(listaJogos);
 						
 					break;
 					
@@ -130,6 +129,24 @@ public class Main {
 					break;
 					
 				case 11:
+					
+					System.out.println("Digite uma opção");
+					
+					System.out.println("1 - Adicionar patrocinador");
+					System.out.println("2 - Remover patrocinador");
+					
+					
+					opcaoPatrocinador = TratamentoExcecao.lerInteiro();
+					
+					if(opcaoPatrocinador == 1) {
+						
+					}
+					else if(opcaoPatrocinador == 2) {
+						
+					}
+					else {
+						System.out.println("Opção inválida");
+					}
 					
 					break;
 					

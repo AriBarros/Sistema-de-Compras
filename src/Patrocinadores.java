@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public abstract class Patrocinadores {
+public class Patrocinadores {
 
-	
 		private int id = 0;
 		private String nome;
 		private String email;

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Jogo {
+public class Jogo implements Funcionalidades{
 
 	private int id = 0;
 	private String nome;
@@ -12,8 +12,8 @@ public class Jogo {
 	
 	Scanner input = new Scanner(System.in);
 	
-	
-	public void adicionarJogo() {
+	@Override
+	public void adicionar() {
 		
 		System.out.println("Digite o nome do jogo");
 		this.setNome(input.nextLine());
@@ -25,24 +25,23 @@ public class Jogo {
 		this.setGenero(input.nextLine());
 		
 		System.out.println("Digite o preço do jogo");
-		this.setPreco(input.nextDouble());
+		this.setPreco(TratamentoExcecao.lerDouble());
 		
-		input.nextLine();
+		
 		
 	
 	}
 	
-	void buscarJogo() {
-		
-		
+	@Override
+	public void buscar() {
 	}
 	
-	void removerJogo(List<Jogo> listaJogos) {
+	@Override
+	public void remover(List<Jogo> listaJogos) {
 		
 		System.out.println("Digite o indice do jogo que deseja remover");
 		
-		int indice = input.nextInt();
-		input.nextLine();
+		int indice = TratamentoExcecao.lerInteiro();
 		
 		if(listaJogos.isEmpty()) {
 			System.out.println("Nenhum jogo cadastrado");
