@@ -7,7 +7,7 @@ public class Main {
 	static Scanner input = new Scanner(System.in);
 	static int opcaoAdministrador, opcao, opcaoPatrocinador;
 	static String login, senha;
-	static int idJogo = 0;
+	static int idJogo = 0, idPatrocinador = 0;
 
 	public static void main(String[] args) {
 		
@@ -15,8 +15,8 @@ public class Main {
 		
 		Usuario usuario = new Usuario();
 		
-		List<Jogo> listaJogos= new ArrayList<Jogo>();
-		List<Patrocinadores> listaPatrocinadores= new ArrayList<Patrocinadores>();
+		List<Jogo> listaJogos = new ArrayList<Jogo>();
+		List<Patrocinador> listaPatrocinadores = new ArrayList<Patrocinador>();
 		
 		
 		do {
@@ -127,19 +127,41 @@ public class Main {
 								
 				case 10:
 					
+					Patrocinador patrocinador = new Patrocinador();
+					
 					System.out.println("Digite uma opção");
 					
 					System.out.println("1 - Adicionar patrocinador");
 					System.out.println("2 - Remover patrocinador");
+					System.out.println("3 - Ver todos patrocinadores");
 					
 					
 					opcaoPatrocinador = TratamentoExcecao.lerInteiro();
 					
 					if(opcaoPatrocinador == 1) {
 						
+						
+						patrocinador.adicionarPatrocinador();
+						
+						listaPatrocinadores.add(patrocinador);
+						
+						patrocinador.setId(idPatrocinador);
+						
+						idPatrocinador++;
+						
+						System.out.println("\nPatrocinador adicionado com sucesso");
+						
 					}
 					else if(opcaoPatrocinador == 2) {
 						
+						patrocinador.removerPatrocinador(listaPatrocinadores);
+						
+						
+					}
+					else if(opcaoPatrocinador == 3) {
+						for(int i = 0; i<listaPatrocinadores.size(); i++) {
+							System.out.println(listaPatrocinadores.get(i).toString());
+						}
 					}
 					else {
 						System.out.println("Opção inválida");
@@ -177,9 +199,9 @@ public class Main {
 		System.out.println("5 - Adicionar jogo na plataforma"); //ok
 		System.out.println("6 - Remover jogo da plataforma"); //ok
 		System.out.println("7 - Buscar jogo na plataforma"); //ok
-		System.out.println("8 - Gerenciar promoções");
+		System.out.println("8 - Gerenciar promoções");	
 		System.out.println("9 - Gerenciar ranking de jogos");
-		System.out.println("10 - Gerenciar patrocinadores");
+		System.out.println("10 - Gerenciar patrocinadores"); //ok
 		System.out.println("0 - Sair\n");
 		
 	}
