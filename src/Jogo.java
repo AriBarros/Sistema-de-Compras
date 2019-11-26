@@ -27,7 +27,7 @@ public class Jogo implements Funcionalidades{
 		System.out.println("Digite o preço do jogo");
 		this.setPreco(TratamentoExcecao.lerDouble());
 		
-		
+		System.out.println("\nJogo adicionado com sucesso!");
 		
 	
 	}
@@ -111,11 +111,6 @@ public class Jogo implements Funcionalidades{
 		}
 		
 		
-		for(int i = 0; i<listaJogos.size(); i++) {
-			System.out.println(listaJogos.get(i).toString());
-		}
-		
-		
 	}
 	
 	public int encontrarJogo(List<Jogo> listaJogos, int numero) {
@@ -150,6 +145,28 @@ public class Jogo implements Funcionalidades{
 		}
 	}
 	
+	public void verRanking(List<Jogo> listaRanking) {
+		
+		int j = 1;
+		
+		System.out.println();
+		
+		for(int i = 0; i<listaRanking.size(); i++) {
+			System.out.println("" + j + " - " + listaRanking.get(i).toRank());
+			j++;
+		}
+		
+	}
+	
+	public String toRank() {
+		
+		String string;
+		
+		string = "Nome: " + this.nome + "		Gênero: " + this.genero + "		Preço: " + this.preco; 	 
+		
+		return string;
+		
+	}
 		
 	@Override
 	public String toString() {

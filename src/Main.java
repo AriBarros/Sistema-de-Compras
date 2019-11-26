@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
 	
 	static Scanner input = new Scanner(System.in);
-	static int opcaoAdministrador, opcao, opcaoPatrocinador;
+	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking;
 	static String login, senha;
-	static int idJogo = 0, idPatrocinador = 0;
+	static int idJogo = 0, idPatrocinador = 0, idRanking = 0;
 
 	public static void main(String[] args) {
 		
@@ -16,6 +16,8 @@ public class Main {
 		Usuario usuario = new Usuario();
 		
 		List<Jogo> listaJogos = new ArrayList<Jogo>();
+		List<Jogo> listaRanking = new ArrayList<Jogo>();
+		
 		List<Patrocinador> listaPatrocinadores = new ArrayList<Patrocinador>();
 		
 		
@@ -61,9 +63,7 @@ public class Main {
 				case 1: 
 					
 					cliente.criarCliente();
-					
-					System.out.println("Cliente adicionado com sucesso");
-							
+						
 					break;
 					
 					
@@ -88,7 +88,6 @@ public class Main {
 					
 				case 5:
 					
-					
 					jogo.adicionar();
 										
 					listaJogos.add(jogo);
@@ -97,11 +96,6 @@ public class Main {
 					jogo.setId(idJogo);
 					
 					idJogo++;
-					
-					
-					for(int i = 0; i<listaJogos.size(); i++) {
-						System.out.println(listaJogos.get(i).toString());
-					}
 					
 					break;
 					
@@ -122,6 +116,42 @@ public class Main {
 					break;
 					
 				case 9:
+					
+					System.out.println("Escolha a opção");
+					
+					System.out.println("1 - Adicionar jogo no ranking");
+					System.out.println("2 - Remover jogo do ranking");
+					System.out.println("3 - Visualizar Ranking");
+					
+					opcaoRanking = TratamentoExcecao.lerInteiro();
+					
+					if(opcaoRanking == 1) {
+						
+						jogo.adicionar();
+						
+						listaRanking.add(jogo);
+						
+						jogo.setId(idRanking);
+						
+						idRanking++;
+					
+						
+					}
+					else if(opcaoRanking == 2) {
+						
+						jogo.remover(listaRanking);
+						
+						
+					}
+					else if(opcaoRanking == 3) {
+						
+						jogo.verRanking(listaRanking);
+						
+					}
+					else {
+						System.out.println("Opção inválida");
+					}
+					
 					
 					break;
 								
@@ -192,13 +222,13 @@ public class Main {
 		System.out.println("Escolha a opção que deseja: \n");
 		
 		
-		System.out.println("1 - Adicionar Cliente"); //ok
-		System.out.println("2 - Remover cliente"); //ok
-		System.out.println("3 - Editar cliente" ); //ok
-		System.out.println("4 - Consultar cliente"); //ok
-		System.out.println("5 - Adicionar jogo na plataforma"); //ok
-		System.out.println("6 - Remover jogo da plataforma"); //ok
-		System.out.println("7 - Buscar jogo na plataforma"); //ok
+		System.out.println("1 - Adicionar Cliente"); //ok ok
+		System.out.println("2 - Remover cliente"); //ok ok
+		System.out.println("3 - Editar cliente" ); //ok ok
+		System.out.println("4 - Consultar cliente"); //ok ok
+		System.out.println("5 - Adicionar jogo na plataforma"); //ok ok
+		System.out.println("6 - Remover jogo da plataforma"); //ok //ok
+		System.out.println("7 - Buscar jogo na plataforma"); //ok //ok
 		System.out.println("8 - Gerenciar promoções");	
 		System.out.println("9 - Gerenciar ranking de jogos");
 		System.out.println("10 - Gerenciar patrocinadores"); //ok

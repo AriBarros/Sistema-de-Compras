@@ -12,12 +12,14 @@ public class TratamentoExcecao {
 		while (true) {
 			
 			try {
-				int valor = input.nextInt();
-				return valor;
+				int resultado = input.nextInt();
+				return resultado;
 				
-			} catch (InputMismatchException e) {
-				System.out.println("Erro: Entrada inválida. Digite um número inteiro.");
-			} finally {
+			} 
+			catch (InputMismatchException e) {
+				System.out.println("Erro: Entrada inválida. Digite um número inteiro para continuar.");
+			} 
+			finally {
 				input.nextLine();
 			}
 		}
@@ -25,19 +27,22 @@ public class TratamentoExcecao {
 	}
 	
 	public static double lerDouble() {
+		
 		input = new Scanner(System.in);
 		
 		while (true) {
 			try {
-				double valor = input.nextDouble();
-				return valor;
+				double resultado = input.nextDouble();
+				return resultado;
 				
-			} catch (InputMismatchException e) {
+			} 
+			catch (InputMismatchException e) {
 				System.out.println("Erro: Entrada inválida.");
-			} finally {
+			} 
+			finally {
 				input.nextLine();
 			}
 		}
-		
 	}
+	
 }

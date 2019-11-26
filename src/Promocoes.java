@@ -8,7 +8,13 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 	@Override
 	public void adicionar() {
 		// TODO Auto-generated method stub
+		System.out.println("Digite o nome do jogo");
 		
+		this.setNome(input.nextLine());
+		
+		System.out.println("Digite o preço do jogo");
+		
+		this.setPreco(TratamentoExcecao.lerDouble());
 		
 		
 	}

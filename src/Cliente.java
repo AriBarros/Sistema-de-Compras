@@ -11,15 +11,14 @@ public class Cliente extends Usuario {
 	//podemos usar o recurso de Generics para restringir as listas a um determinado tipo de objetos
 	//ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
 	
-	Usuario usuario = new Usuario();
-	
 	
 	//ArrayList listaClientes = new ArrayList();
 	List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
 	public void criarCliente() {
 		
-		
+		Usuario usuario = new Usuario();
+			
 		System.out.println("\nInsira os dados do cliente\n");
 		
 		System.out.println("Digite o nome");
@@ -44,10 +43,8 @@ public class Cliente extends Usuario {
 		
 		idCliente++;
 		
-		for(int i = 0; i<listaUsuarios.size(); i++) {
-			System.out.println(listaUsuarios.get(i).toString());
-		}
 		
+		System.out.println("\nCliente adicionado com sucesso\n");
 		
 		
 	}
@@ -92,12 +89,7 @@ public class Cliente extends Usuario {
 			
 		}
 		
-		
-		for(int i = 0; i<listaUsuarios.size(); i++) {
-			System.out.println(listaUsuarios.get(i).toString());
-		}
-		
-		
+			
 	}
 	
 	public void editarCliente() {
