@@ -33,7 +33,43 @@ public class Jogo implements Funcionalidades{
 	}
 	
 	@Override
-	public void buscar() {
+	public void buscar(List<Jogo> listaJogos) {
+		
+		int opcao, numero, indice;
+		
+		System.out.println("Digite a opção que deseja");
+		
+		System.out.println("1 - Ver todos os jogos");
+		System.out.println("2 - Consultar jogo por índice");
+		
+		
+		opcao = TratamentoExcecao.lerInteiro();
+		
+		if(opcao == 1) {
+			
+			for(int i = 0; i<listaJogos.size(); i++) {
+				System.out.println(listaJogos.get(i).toString());
+			}
+			
+		}
+		else if(opcao == 2) {
+			
+			System.out.println("Digite o índice do jogo");
+			
+			numero = TratamentoExcecao.lerInteiro();
+			
+			indice = encontrarJogo(listaJogos, numero);
+			if(indice == -1) return;
+			
+			
+			System.out.println(listaJogos.get(indice).toString());
+			
+		}
+		else {
+			System.out.println("Opção inválida");
+		}
+		
+		
 	}
 	
 	@Override
@@ -82,10 +118,39 @@ public class Jogo implements Funcionalidades{
 		
 	}
 	
+	public int encontrarJogo(List<Jogo> listaJogos, int numero) {
+		
+		
+		int i, flag = 0;
+		
+		if(listaJogos.isEmpty()) {
+			
+			System.out.println("Não há jogos cadastrados");
+			
+			return -1;
+		}
+		
+		for(i = 0; i<listaJogos.size(); i++) {
+			
+			if(listaJogos.get(i).getId() == numero) {
+				flag = 1;
+				break;
+			}
+			
+		}
+		
+		if(flag == 1) {
+			
+			return i;
+		}
+		else {
+			
+			System.out.println("Não há jogo com esse índice");
+			return -1;
+		}
+	}
 	
-	
-	
-
+		
 	@Override
 	public String toString() {
 		

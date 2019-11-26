@@ -20,7 +20,7 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 	}
 
 	@Override
-	public void buscar() {
+	public void buscar(List<Jogo> listaJogos) {
 		// TODO Auto-generated method stub
 		
 	}

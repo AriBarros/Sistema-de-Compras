@@ -113,6 +113,7 @@ public class Main {
 					
 				case 7:
 					
+					jogo.buscar(listaJogos);
 				
 					break;
 					
@@ -123,12 +124,8 @@ public class Main {
 				case 9:
 					
 					break;
-					
+								
 				case 10:
-					
-					break;
-					
-				case 11:
 					
 					System.out.println("Digite uma opção");
 					
@@ -179,11 +176,10 @@ public class Main {
 		System.out.println("4 - Consultar cliente"); //ok
 		System.out.println("5 - Adicionar jogo na plataforma"); //ok
 		System.out.println("6 - Remover jogo da plataforma"); //ok
-		System.out.println("7 - Editar jogo da plataforma");
-		System.out.println("8 - Buscar jogo na plataforma");
-		System.out.println("9 - Gerenciar promoções");
-		System.out.println("10 - Gerenciar ranking de jogos");
-		System.out.println("11 - Gerenciar patrocinadores");
+		System.out.println("7 - Buscar jogo na plataforma"); //ok
+		System.out.println("8 - Gerenciar promoções");
+		System.out.println("9 - Gerenciar ranking de jogos");
+		System.out.println("10 - Gerenciar patrocinadores");
 		System.out.println("0 - Sair\n");
 		
 	}

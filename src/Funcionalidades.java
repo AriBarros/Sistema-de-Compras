@@ -6,6 +6,6 @@ public interface Funcionalidades {
 
 	void remover(List<Jogo> listaJogos);
 	
-	void buscar();
+	void buscar(List<Jogo> listaJogos);
 	
 }
