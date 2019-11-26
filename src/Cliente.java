@@ -12,13 +12,14 @@ public class Cliente extends Usuario {
 	//podemos usar o recurso de Generics para restringir as listas a um determinado tipo de objetos
 	//ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
 	
+	Usuario usuario = new Usuario();
+	
 	
 	//ArrayList listaClientes = new ArrayList();
-	List<Usuario> listaUsuarios = new ArrayList<>();
+	List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
 	public void criarCliente() {
 		
-		Usuario usuario = new Usuario();
 		
 		System.out.println("\nInsira os dados do cliente\n");
 		

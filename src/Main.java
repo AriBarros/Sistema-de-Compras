@@ -15,9 +15,8 @@ public class Main {
 		
 		Usuario usuario = new Usuario();
 		
-		Jogo jogo = new Jogo();
-		
-		List<Jogo> listaJogos= new ArrayList<>();
+		List<Jogo> listaJogos= new ArrayList<Jogo>();
+		List<Patrocinadores> listaPatrocinadores= new ArrayList<Patrocinadores>();
 		
 		
 		do {
@@ -49,6 +48,9 @@ public class Main {
 		
 		while(true) {
 			
+			//Instanciando aqui pois deve instanciar para acessar a função, se não sobrescreve nos outros ids
+			Jogo jogo = new Jogo();
+			
 			
 			menu();
 			
@@ -73,7 +75,7 @@ public class Main {
 					break;
 				
 					
-				case 3: //FIXAR
+				case 3: 
 					
 					cliente.editarCliente();
 					
@@ -87,11 +89,13 @@ public class Main {
 					
 				case 5:
 					
+					
 					jogo.adicionarJogo();
+										
+					listaJogos.add(jogo);
+					
 					
 					jogo.setId(idJogo);
-					
-					listaJogos.add(jogo);
 					
 					idJogo++;
 					
@@ -104,9 +108,28 @@ public class Main {
 					
 				case 6:
 					
-					//jogo.removerJogo(listaJogos);
+					jogo.removerJogo(listaJogos);
+						
+					break;
 					
-					//listaJogos.remove();
+				case 7:
+					
+				
+					break;
+					
+				case 8:
+					
+					break;
+					
+				case 9:
+					
+					break;
+					
+				case 10:
+					
+					break;
+					
+				case 11:
 					
 					break;
 					
@@ -138,7 +161,7 @@ public class Main {
 		System.out.println("3 - Editar cliente" ); //ok
 		System.out.println("4 - Consultar cliente"); //ok
 		System.out.println("5 - Adicionar jogo na plataforma"); //ok
-		System.out.println("6 - Remover jogo da plataforma");
+		System.out.println("6 - Remover jogo da plataforma"); //ok
 		System.out.println("7 - Editar jogo da plataforma");
 		System.out.println("8 - Buscar jogo na plataforma");
 		System.out.println("9 - Gerenciar promoções");

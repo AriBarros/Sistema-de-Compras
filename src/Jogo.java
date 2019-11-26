@@ -68,7 +68,7 @@ public class Jogo {
 			}
 			else {
 				
-				System.out.println("jogo removido com sucesso");
+				System.out.println("Jogo removido com sucesso");
 			
 			}
 				

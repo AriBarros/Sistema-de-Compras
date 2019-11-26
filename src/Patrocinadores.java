@@ -3,7 +3,7 @@ import java.util.Scanner;
 public abstract class Patrocinadores {
 
 	
-		private int id;
+		private int id = 0;
 		private String nome;
 		private String email;
 		
