@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
 	
 	static Scanner input = new Scanner(System.in);
-	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking;
+	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking, opcaoPromocao;
 	static String login, senha;
-	static int idJogo = 0, idPatrocinador = 0, idRanking = 0;
+	static int idJogo = 0, idPatrocinador = 0, idRanking = 0, idPromocao = 0;
 
 	public static void main(String[] args) {
 		
@@ -17,10 +17,12 @@ public class Main {
 		
 		List<Jogo> listaJogos = new ArrayList<Jogo>();
 		List<Jogo> listaRanking = new ArrayList<Jogo>();
+		List<Jogo> listaPromocoes = new ArrayList<Jogo>();
 		
 		List<Patrocinador> listaPatrocinadores = new ArrayList<Patrocinador>();
 		
 		
+
 		do {
 			
 			System.out.println("\nInforme o login e a senha para entrar no sistema\n");
@@ -112,6 +114,49 @@ public class Main {
 					break;
 					
 				case 8:
+					
+					Promocoes promocao = new Promocoes();
+					
+					System.out.println("Digite uma opção");
+					
+					System.out.println("1 - Adicionar jogo na promoção");
+					System.out.println("2 - Remover jogo da promoção");
+					System.out.println("3 - Ver promoções");
+					
+					
+					opcaoPromocao = TratamentoExcecao.lerInteiro();
+					
+					if(opcaoPromocao == 1) {
+						
+						
+						promocao.adicionar();
+						
+						listaPromocoes.add(promocao);
+						
+						promocao.setId(idPromocao);
+						
+						idPromocao++;
+						
+						System.out.println("\nPromoção adicionada com sucesso");
+						
+					}
+					else if(opcaoPromocao == 2) {
+						
+						promocao.remover(listaPromocoes);
+						
+					}
+					else if(opcaoPromocao == 3) {
+						
+						for(int i = 0; i<listaPromocoes.size(); i++) {
+							
+							System.out.println(listaPromocoes.get(i).toString());
+								
+						}
+						
+					}
+					else {
+						System.out.println("Opção inválida");
+					}
 					
 					break;
 					
@@ -229,7 +274,7 @@ public class Main {
 		System.out.println("5 - Adicionar jogo na plataforma"); //ok ok
 		System.out.println("6 - Remover jogo da plataforma"); //ok //ok
 		System.out.println("7 - Buscar jogo na plataforma"); //ok //ok
-		System.out.println("8 - Gerenciar promoções");	
+		System.out.println("8 - Gerenciar promoções");	//ok
 		System.out.println("9 - Gerenciar ranking de jogos"); //ok
 		System.out.println("10 - Gerenciar patrocinadores"); //ok
 		System.out.println("0 - Sair\n");

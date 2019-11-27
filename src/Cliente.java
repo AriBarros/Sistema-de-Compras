@@ -8,11 +8,7 @@ public class Cliente extends Usuario {
 	
 	private int idCliente = 0;
 	
-	//podemos usar o recurso de Generics para restringir as listas a um determinado tipo de objetos
-	//ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
 	
-	
-	//ArrayList listaClientes = new ArrayList();
 	List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
 	public void criarCliente() {
@@ -128,7 +124,6 @@ public class Cliente extends Usuario {
 	}
 	
 	
-	//VERIFICAR CONDIÇÃO DO RETURN 
 	public void buscarCliente() {
 		
 		int opcao, numero, indice;

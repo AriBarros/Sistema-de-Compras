@@ -9,7 +9,7 @@ public class Jogo implements Funcionalidades{
 	private String descricao;
 	private String genero;
 	private double preco;
-	
+
 	Scanner input = new Scanner(System.in);
 	
 	@Override
@@ -48,7 +48,8 @@ public class Jogo implements Funcionalidades{
 		if(opcao == 1) {
 			
 			for(int i = 0; i<listaJogos.size(); i++) {
-				System.out.println(listaJogos.get(i).toString());
+				
+					System.out.println(listaJogos.get(i).toString());
 			}
 			
 		}
@@ -221,5 +222,4 @@ public class Jogo implements Funcionalidades{
 		this.preco = preco;
 	}
 	
-
 }
