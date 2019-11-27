@@ -267,16 +267,16 @@ public class Main {
 		System.out.println("Escolha a opção que deseja: \n");
 		
 		
-		System.out.println("1 - Adicionar Cliente"); //ok ok
-		System.out.println("2 - Remover cliente"); //ok ok
-		System.out.println("3 - Editar cliente" ); //ok ok
-		System.out.println("4 - Consultar cliente"); //ok ok
-		System.out.println("5 - Adicionar jogo na plataforma"); //ok ok
-		System.out.println("6 - Remover jogo da plataforma"); //ok //ok
-		System.out.println("7 - Buscar jogo na plataforma"); //ok //ok
-		System.out.println("8 - Gerenciar promoções");	//ok
-		System.out.println("9 - Gerenciar ranking de jogos"); //ok
-		System.out.println("10 - Gerenciar patrocinadores"); //ok
+		System.out.println("1 - Adicionar Cliente"); 
+		System.out.println("2 - Remover cliente"); 
+		System.out.println("3 - Editar cliente" ); 
+		System.out.println("4 - Consultar cliente"); 
+		System.out.println("5 - Adicionar jogo na plataforma"); 
+		System.out.println("6 - Remover jogo da plataforma"); 
+		System.out.println("7 - Buscar jogo na plataforma"); 
+		System.out.println("8 - Gerenciar promoções");	
+		System.out.println("9 - Gerenciar ranking de jogos"); 
+		System.out.println("10 - Gerenciar patrocinadores"); 
 		System.out.println("0 - Sair\n");
 		
 	}
