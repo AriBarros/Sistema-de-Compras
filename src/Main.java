@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	
 	static Scanner input = new Scanner(System.in);
-	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking, opcaoPromocao;
+	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking, opcaoPromocao, indiceJogo;
 	static String login, senha;
 	static int idJogo = 0, idPatrocinador = 0, idRanking = 0, idPromocao = 0;
 
@@ -52,7 +52,7 @@ public class Main {
 		
 		while(true) {
 			
-			//Instanciando aqui pois deve instanciar para acessar a funÁ„o, se n„o sobrescreve nos outros ids
+			//Instanciando aqui pois deve instanciar para acessar a fun√ß√£o, se n√£o sobrescreve nos outros ids
 			Jogo jogo = new Jogo();
 			
 			
@@ -117,18 +117,30 @@ public class Main {
 					
 					Promocoes promocao = new Promocoes();
 					
-					System.out.println("Digite uma opÁ„o");
+					System.out.println("Digite uma op√ß√£o");
 					
-					System.out.println("1 - Adicionar jogo na promoÁ„o");
-					System.out.println("2 - Remover jogo da promoÁ„o");
-					System.out.println("3 - Ver promoÁıes");
+					System.out.println("1 - Adicionar jogo na promo√ß√£o");
+					System.out.println("2 - Remover jogo da promo√ß√£o");
+					System.out.println("3 - Ver promo√ß√µes");
 					
 					
 					opcaoPromocao = TratamentoExcecao.lerInteiro();
 					
 					if(opcaoPromocao == 1) {
 						
+						System.out.println("Digite o √≠ndice do jogo que deseja colocar em promo√ß√£o");
 						
+						indiceJogo = TratamentoExcecao.lerInteiro();
+						
+						int aux = jogo.encontrarJogo(listaJogos, indiceJogo);
+						
+						if(aux == -1) break;
+						
+						promocao.setNome(listaJogos.get(indiceJogo).getNome());
+						promocao.setGenero(listaJogos.get(indiceJogo).getGenero());
+					
+						
+							
 						promocao.adicionar();
 						
 						listaPromocoes.add(promocao);
@@ -137,7 +149,7 @@ public class Main {
 						
 						idPromocao++;
 						
-						System.out.println("\nPromoÁ„o adicionada com sucesso");
+						System.out.println("\nPromo√ß√£o adicionada com sucesso");
 						
 					}
 					else if(opcaoPromocao == 2) {
@@ -149,20 +161,20 @@ public class Main {
 						
 						for(int i = 0; i<listaPromocoes.size(); i++) {
 							
-							System.out.println(listaPromocoes.get(i).toString());
+							System.out.println(listaPromocoes.get(i).toRank());
 								
 						}
 						
 					}
 					else {
-						System.out.println("OpÁ„o inv·lida");
+						System.out.println("Op√ß√£o inv√°lida");
 					}
 					
 					break;
 					
 				case 9:
 					
-					System.out.println("Escolha a opÁ„o");
+					System.out.println("Escolha a op√ß√£o");
 					
 					System.out.println("1 - Adicionar jogo no ranking");
 					System.out.println("2 - Remover jogo do ranking");
@@ -194,7 +206,7 @@ public class Main {
 						
 					}
 					else {
-						System.out.println("OpÁ„o inv·lida");
+						System.out.println("Op√ß√£o inv√°lida");
 					}
 					
 					
@@ -204,7 +216,7 @@ public class Main {
 					
 					Patrocinador patrocinador = new Patrocinador();
 					
-					System.out.println("Digite uma opÁ„o");
+					System.out.println("Digite uma op√ß√£o");
 					
 					System.out.println("1 - Adicionar patrocinador");
 					System.out.println("2 - Remover patrocinador");
@@ -239,7 +251,7 @@ public class Main {
 						}
 					}
 					else {
-						System.out.println("OpÁ„o inv·lida");
+						System.out.println("Op√ß√£o inv√°lida");
 					}
 					
 					break;
@@ -250,7 +262,7 @@ public class Main {
 					
 				default:
 					
-					System.out.println("OpÁ„o inv·lida\n");
+					System.out.println("Op√ß√£o inv√°lida\n");
 					
 			
 			}
@@ -261,10 +273,10 @@ public class Main {
 	
 	public static void menu() {
 		
-		System.out.println("\n\n-----∫ Sistema para gerenciamento de compra de jogos ∞-----\n");
+		System.out.println("\n\n-----¬∫ Sistema para gerenciamento de compra de jogos ¬∞-----\n");
 		
 		
-		System.out.println("Escolha a opÁ„o que deseja: \n");
+		System.out.println("Escolha a op√ß√£o que deseja: \n");
 		
 		
 		System.out.println("1 - Adicionar Cliente"); 
@@ -274,7 +286,7 @@ public class Main {
 		System.out.println("5 - Adicionar jogo na plataforma"); 
 		System.out.println("6 - Remover jogo da plataforma"); 
 		System.out.println("7 - Buscar jogo na plataforma"); 
-		System.out.println("8 - Gerenciar promoÁıes");	
+		System.out.println("8 - Gerenciar promo√ß√µes");	
 		System.out.println("9 - Gerenciar ranking de jogos"); 
 		System.out.println("10 - Gerenciar patrocinadores"); 
 		System.out.println("0 - Sair\n");
