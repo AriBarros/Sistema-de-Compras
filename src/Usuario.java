@@ -102,6 +102,14 @@ public class Usuario {
 			
 			String cpf = input.nextLine();
 			
+			while(isCPF(cpf) == false) {
+				
+				System.out.println("Digite o CPF na formatacao correta");
+				
+				cpf = input.nextLine();
+				
+			}
+			
 			setCpf(cpf);
 		
 			System.out.println("\nCPF do cliente alterado com sucesso!\n");
