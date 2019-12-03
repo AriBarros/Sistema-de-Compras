@@ -119,16 +119,16 @@ public class Main {
 					
 					System.out.println("Digite uma opÃ§Ã£o");
 					
-					System.out.println("1 - Adicionar jogo na promoÃ§Ã£o");
-					System.out.println("2 - Remover jogo da promoÃ§Ã£o");
-					System.out.println("3 - Ver promoÃ§Ãµes");
+					System.out.println("1 - Adicionar jogo na promoções");
+					System.out.println("2 - Remover jogo da promoções");
+					System.out.println("3 - Ver promoções");
 					
 					
 					opcaoPromocao = TratamentoExcecao.lerInteiro();
 					
 					if(opcaoPromocao == 1) {
 						
-						System.out.println("Digite o Ã­ndice do jogo que deseja colocar em promoÃ§Ã£o");
+						System.out.println("Digite o índice do jogo que deseja colocar em promoção");
 						
 						indiceJogo = TratamentoExcecao.lerInteiro();
 						
@@ -139,7 +139,6 @@ public class Main {
 						promocao.setNome(listaJogos.get(indiceJogo).getNome());
 						promocao.setGenero(listaJogos.get(indiceJogo).getGenero());
 					
-						
 							
 						promocao.adicionar();
 						

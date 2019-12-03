@@ -14,6 +14,8 @@ public class Cliente extends Usuario {
 	public void criarCliente() {
 		
 		Usuario usuario = new Usuario();
+		
+		String cpf;
 			
 		System.out.println("\nInsira os dados do cliente\n");
 		
@@ -26,6 +28,14 @@ public class Cliente extends Usuario {
 		System.out.println("Digite o cpf");
 		usuario.setCpf(input.nextLine());
 		
+		while(usuario.isCPF(usuario.getCpf()) == false) {
+			
+			System.out.println("Digite o CPF na formatacao correta");
+			
+			usuario.setCpf(input.nextLine());
+		}
+		
+
 		System.out.println("Digite o email");
 		usuario.setEmail(input.nextLine());
 		
