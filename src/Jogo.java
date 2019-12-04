@@ -163,7 +163,8 @@ public class Jogo implements Funcionalidades{
 		
 		String string;
 		
-		string = "Nome: " + this.nome + "		Gênero: " + this.genero + "		Preço: " + this.preco; 	 
+		string = "Nome: " + this.nome + "		Gênero: " + this.genero + "		Preço: " + this.preco;
+		
 		
 		return string;
 		

@@ -8,7 +8,7 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 		// TODO Auto-generated method stub
 		
 		
-		System.out.println("Digite o preõo do jogo em promoção");
+		System.out.println("Digite o preço do jogo em promoção");
 		this.setPreco(TratamentoExcecao.lerDouble());
 		
 	
@@ -56,6 +56,7 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 		}
 		
 	}
+	/*
 	
 	@Override
 	public String toRank() {
@@ -68,6 +69,6 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 				
 		return string;
 	}
-
+	*/
 	
 }

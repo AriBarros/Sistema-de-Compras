@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	
 	static Scanner input = new Scanner(System.in);
-	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking, opcaoPromocao, indiceJogo;
+	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking, opcaoPromocao, indiceJogo, indiceRanking;
 	static String login, senha;
 	static int idJogo = 0, idPatrocinador = 0, idRanking = 0, idPromocao = 0;
 
@@ -148,7 +148,6 @@ public class Main {
 						
 						idPromocao++;
 						
-						System.out.println("\nPromoção adicionada com sucesso");
 						
 					}
 					else if(opcaoPromocao == 2) {
@@ -183,9 +182,21 @@ public class Main {
 					
 					if(opcaoRanking == 1) {
 						
-						jogo.adicionar();
+						System.out.println("Digite o índice do jogo que deseja colocar no ranking");
+						
+						indiceRanking = TratamentoExcecao.lerInteiro();
+						
+						int aux = jogo.encontrarJogo(listaJogos, indiceRanking);
+						
+						if(aux == -1) break;
+						
+						
+						jogo.setNome(listaJogos.get(indiceRanking).getNome());
+						jogo.setGenero(listaJogos.get(indiceRanking).getGenero());
+						jogo.setPreco(listaJogos.get(indiceRanking).getPreco());
 						
 						listaRanking.add(jogo);
+						
 						
 						jogo.setId(idRanking);
 						
