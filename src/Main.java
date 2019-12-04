@@ -117,7 +117,7 @@ public class Main {
 					
 					Promocoes promocao = new Promocoes();
 					
-					System.out.println("Digite uma opÃ§Ã£o");
+					System.out.println("Digite uma opção");
 					
 					System.out.println("1 - Adicionar jogo na promoções");
 					System.out.println("2 - Remover jogo da promoções");
@@ -148,7 +148,7 @@ public class Main {
 						
 						idPromocao++;
 						
-						System.out.println("\nPromoÃ§Ã£o adicionada com sucesso");
+						System.out.println("\nPromoção adicionada com sucesso");
 						
 					}
 					else if(opcaoPromocao == 2) {
@@ -166,14 +166,14 @@ public class Main {
 						
 					}
 					else {
-						System.out.println("OpÃ§Ã£o invÃ¡lida");
+						System.out.println("Opção inválida");
 					}
 					
 					break;
 					
 				case 9:
 					
-					System.out.println("Escolha a opÃ§Ã£o");
+					System.out.println("Escolha a opção");
 					
 					System.out.println("1 - Adicionar jogo no ranking");
 					System.out.println("2 - Remover jogo do ranking");
@@ -205,7 +205,7 @@ public class Main {
 						
 					}
 					else {
-						System.out.println("OpÃ§Ã£o invÃ¡lida");
+						System.out.println("Opção inválida");
 					}
 					
 					
@@ -215,7 +215,7 @@ public class Main {
 					
 					Patrocinador patrocinador = new Patrocinador();
 					
-					System.out.println("Digite uma opÃ§Ã£o");
+					System.out.println("Digite uma opção");
 					
 					System.out.println("1 - Adicionar patrocinador");
 					System.out.println("2 - Remover patrocinador");
@@ -250,7 +250,7 @@ public class Main {
 						}
 					}
 					else {
-						System.out.println("OpÃ§Ã£o invÃ¡lida");
+						System.out.println("Opção inválida");
 					}
 					
 					break;
@@ -261,7 +261,7 @@ public class Main {
 					
 				default:
 					
-					System.out.println("OpÃ§Ã£o invÃ¡lida\n");
+					System.out.println("Opção inválida\n");
 					
 			
 			}
@@ -272,10 +272,10 @@ public class Main {
 	
 	public static void menu() {
 		
-		System.out.println("\n\n-----Âº Sistema para gerenciamento de compra de jogos Â°-----\n");
+		System.out.println("\n\n-----º Sistema para gerenciamento de compra de jogos º-----\n");
 		
 		
-		System.out.println("Escolha a opÃ§Ã£o que deseja: \n");
+		System.out.println("Escolha a opcao que deseja: \n");
 		
 		
 		System.out.println("1 - Adicionar Cliente"); 
@@ -285,7 +285,7 @@ public class Main {
 		System.out.println("5 - Adicionar jogo na plataforma"); 
 		System.out.println("6 - Remover jogo da plataforma"); 
 		System.out.println("7 - Buscar jogo na plataforma"); 
-		System.out.println("8 - Gerenciar promoÃ§Ãµes");	
+		System.out.println("8 - Gerenciar promocoes");	
 		System.out.println("9 - Gerenciar ranking de jogos"); 
 		System.out.println("10 - Gerenciar patrocinadores"); 
 		System.out.println("0 - Sair\n");

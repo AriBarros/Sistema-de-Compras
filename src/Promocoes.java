@@ -8,11 +8,11 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 		// TODO Auto-generated method stub
 		
 		
-		System.out.println("Digite o preÃ§o do jogo em promoÃ§Ã£o");
+		System.out.println("Digite o preõo do jogo em promoção");
 		this.setPreco(TratamentoExcecao.lerDouble());
 		
 	
-		System.out.println("Jogo adicionado na promoÃ§Ã£o com sucesso");
+		System.out.println("Jogo adicionado na promoção com sucesso");
 		
 	}
 
@@ -43,7 +43,7 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 			
 			if(flag == 0) {
 				
-				System.out.println("Nenhum jogo com esse Ã­ndice");
+				System.out.println("Nenhum jogo com esse índice");
 				
 			}
 			else {
@@ -63,7 +63,7 @@ public class Promocoes extends Jogo implements Funcionalidades  {
 		String string;
 		
 		string = "Id: " + getId() + "		Nome: " + getNome();
-		string += "		GÃªnero: " + getGenero() + "		PreÃ§o em promoÃ§Ã£o: " + getPreco(); 
+		string += "		Gênero: " + getGenero() + "		Preço em promoção: " + getPreco(); 
 				
 				
 		return string;
