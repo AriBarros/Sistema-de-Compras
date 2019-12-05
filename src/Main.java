@@ -201,6 +201,8 @@ public class Main {
 						jogo.setId(idRanking);
 						
 						idRanking++;
+						
+						System.out.println("Jogo adicionado no ranking com sucesso!");
 					
 						
 					}
@@ -289,7 +291,7 @@ public class Main {
 		System.out.println("Escolha a opcao que deseja: \n");
 		
 		
-		System.out.println("1 - Adicionar Cliente"); 
+		System.out.println("1 - Adicionar cliente"); 
 		System.out.println("2 - Remover cliente"); 
 		System.out.println("3 - Editar cliente" ); 
 		System.out.println("4 - Consultar cliente"); 

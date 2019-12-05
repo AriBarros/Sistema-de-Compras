@@ -28,7 +28,7 @@ public class Cliente extends Usuario {
 		System.out.println("Digite o cpf");
 		usuario.setCpf(input.nextLine());
 		
-		while(usuario.isCPF(usuario.getCpf()) == false) {
+		while(TratamentoExcecao.isCPF(usuario.getCpf()) == false) {
 			
 			System.out.println("Digite o CPF na formatacao correta");
 			

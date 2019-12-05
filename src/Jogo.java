@@ -32,7 +32,7 @@ public class Jogo implements Funcionalidades{
 	
 	}
 	
-	@Override
+	
 	public void buscar(List<Jogo> listaJogos) {
 		
 		int opcao, numero, indice;
