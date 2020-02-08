@@ -1,21 +1,20 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class Patrocinador {
+public class Patrocinador extends Usuario {
 
-		private int id = 0;
-		private String nome;
+		private int idPatrocinador = 0;
 		private String empresa;
-		private String email;
 		
 		static Scanner input = new Scanner(System.in);
 		
-
+		Usuario usuario = new Usuario();
+		
 		public void adicionarPatrocinador() {
 			
 			System.out.println("Digite o nome do patrocinador");
 			
-			this.setNome(input.nextLine());
+			usuario.setNome(input.nextLine());
 			
 			System.out.println("Digite o nome da empresa");
 			
@@ -23,7 +22,7 @@ public class Patrocinador {
 			
 			System.out.println("Digite o email do patrocinador");
 			
-			this.setEmail(input.nextLine());
+			usuario.setEmail(input.nextLine());
 			
 		}
 		
@@ -74,8 +73,8 @@ public class Patrocinador {
 			
 			String string;
 			
-			string = "Id: " + this.id + "		Nome: " + this.nome; 
-			string += "		Empresa: " + this.empresa + "		E-mail: " + this.email;
+			string = "Id: " + this.idPatrocinador + "		Nome: " + usuario.getNome(); 
+			string += "		Empresa: " + this.empresa + "		E-mail: " + usuario.getEmail();
 	
 			return string;
 			
@@ -85,19 +84,13 @@ public class Patrocinador {
 		
 		
 		public int getId() {
-			return id;
+			return idPatrocinador;
 		}
 
 		public void setId(int id) {
-			this.id = id;
+			this.idPatrocinador = id;
 		}
 
-		public String getNome() {
-			return nome;
-		}
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
 		public String getEmpresa() {
 			return empresa;
 		}
@@ -106,11 +99,4 @@ public class Patrocinador {
 			this.empresa = empresa;
 		}
 
-		public String getEmail() {
-			return email;
-		}
-		public void setEmail(String email) {
-			this.email = email;
-		}
-		
 }
