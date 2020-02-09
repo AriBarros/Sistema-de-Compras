@@ -1,4 +1,4 @@
-# Sistema para gerenciamento de plataforma de Compra de Jogos
+# Projeto de Refatoramento do Sistema para gerenciamento de plataforma de Compra de Jogos
 
 
 O objetivo do projeto é construir um **sistema para gerenciamento de plataforma de compras**. O sistema consiste de um conjunto de funcionalidades: **cadastrar usuário**, **remover usuários**, **editar usuário**, **gerenciar patrocinadores**, **adicionar jogo**, **remover jogo**, **buscar jogo**, **promoções**, **consultar usuário** e **ranking**. O sistema possibilita o gerenciamento da plataforma através do administrador, esse será capaz de realizar todas as funcionalidades contidas no projeto. 
