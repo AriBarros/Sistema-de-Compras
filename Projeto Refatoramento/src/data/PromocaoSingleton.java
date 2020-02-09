@@ -32,8 +32,9 @@ public class PromocaoSingleton {
 		return promocao;
 	}
 
-	public void setPromocao(Promocoes promocao) {
-		this.promocao = promocao;
+	public void setPromocao() {
+		Promocoes promocao1 = new Promocoes();
+		this.promocao = promocao1;
 	}
 	
 }

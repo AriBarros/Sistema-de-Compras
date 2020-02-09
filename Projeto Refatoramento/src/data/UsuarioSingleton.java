@@ -12,7 +12,6 @@ public class UsuarioSingleton {
 	public List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
 	Usuario usuario = new Usuario();
-	Cliente cliente = new Cliente();
 	
 	private UsuarioSingleton() { 
 	        
@@ -27,21 +26,18 @@ public class UsuarioSingleton {
 	}
 
 	public Usuario getUsuario() {
+	
 		return usuario;
+		
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setUsuario() {
+		
+		Usuario usuario1 = new Usuario();
+		this.usuario = usuario1;
+		
 	}
 
-	public Cliente getCliente() {
-		return cliente;
-	}
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-	
-	
 	
 }

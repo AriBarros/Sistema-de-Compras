@@ -19,16 +19,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Cliente cliente = new Cliente();
+		Cliente cliente = new Cliente();
 		
 		UsuarioSingleton usuario = UsuarioSingleton.getInstance();
-		//UsuarioSingleton cliente = UsuarioSingleton.getInstance();
-		
 		PromocaoSingleton promocao = PromocaoSingleton.getInstance();
 		
+			
 		List<Jogo> listaJogos = new ArrayList<Jogo>();
 		List<Jogo> listaRanking = new ArrayList<Jogo>();
-		
 		List<Patrocinador> listaPatrocinadores = new ArrayList<Patrocinador>();
 		
 		
@@ -65,7 +63,6 @@ public class Main {
 			//Instanciando aqui pois deve instanciar para acessar a fun√ß√£o, se n√£o sobrescreve nos outros ids
 			Jogo jogo = new Jogo();
 			
-			
 			menu();
 			
 			opcao = TratamentoExcecao.lerInteiro();
@@ -74,27 +71,27 @@ public class Main {
 			
 				case 1: 
 					
-					usuario.getCliente().criarCliente();
+					cliente.criarCliente();
 						
 					break;
 					
 					
 				case 2:
 					
-					usuario.getCliente().removerCliente();
+					cliente.removerCliente();
 			
 					break;
 				
 					
 				case 3: 
 					
-					usuario.getCliente().editarCliente();
+					cliente.editarCliente();
 					
 					break;
 					
 				case 4:
 					
-					usuario.getCliente().buscarCliente();
+					cliente.buscarCliente();
 					
 					break;
 					
@@ -124,6 +121,9 @@ public class Main {
 					break;
 					
 				case 8:
+					
+					
+					promocao.setPromocao();
 					
 					System.out.println("Digite uma opÁ„o");
 					

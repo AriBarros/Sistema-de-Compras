@@ -16,15 +16,10 @@ public class Cliente extends Usuario {
 	UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 	
 	
-	//singleton
-	//List<Usuario> listaUsuarios = new ArrayList<Usuario>();
-	
 	public void criarCliente() {
-			
-		//singleton
-		//Usuario usuario = new Usuario();
-		//UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 		
+		usuario.setUsuario();
+				
 		String cpf;
 			
 		System.out.println("\nInsira os dados do cliente\n");
@@ -52,12 +47,12 @@ public class Cliente extends Usuario {
 		System.out.println("Digite a idade");
 		usuario.getUsuario().setIdade(TratamentoExcecao.lerInteiro()); 
 		
+		
+		usuario.getUsuario().setId(idCliente);
 
 		//pode ser um erro aqui
 		usuario.listaUsuarios.add(usuario.getUsuario());
-		
-		usuario.getUsuario().setId(idCliente);
-		
+				
 		idCliente++;
 		
 		System.out.println("\nCliente adicionado com sucesso\n");
@@ -69,7 +64,7 @@ public class Cliente extends Usuario {
 	
 	
 	public void removerCliente() {
-		
+			
 		System.out.println("Digite o indice do cliente que deseja remover");
 		
 		int indice = TratamentoExcecao.lerInteiro();
