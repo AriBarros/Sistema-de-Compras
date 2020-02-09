@@ -1,4 +1,4 @@
-# SoftBar Company Refatorado
+# Projeto de Refatoramento Sistema para gerenciamento de plataforma de Compra de Jogos
 
 ## Padrões utilizados
 
