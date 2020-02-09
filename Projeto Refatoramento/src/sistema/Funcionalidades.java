@@ -1,3 +1,4 @@
+package sistema;
 import java.util.List;
 
 public interface Funcionalidades {

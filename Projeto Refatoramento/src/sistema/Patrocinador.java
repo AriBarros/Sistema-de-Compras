@@ -1,5 +1,8 @@
+package sistema;
 import java.util.List;
 import java.util.Scanner;
+
+import data.UsuarioSingleton;
 
 public class Patrocinador extends Usuario {
 
@@ -8,13 +11,13 @@ public class Patrocinador extends Usuario {
 		
 		static Scanner input = new Scanner(System.in);
 		
-		Usuario usuario = new Usuario();
+		UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 		
 		public void adicionarPatrocinador() {
 			
 			System.out.println("Digite o nome do patrocinador");
 			
-			usuario.setNome(input.nextLine());
+			usuario.getUsuario().setNome(input.nextLine());
 			
 			System.out.println("Digite o nome da empresa");
 			
@@ -22,7 +25,7 @@ public class Patrocinador extends Usuario {
 			
 			System.out.println("Digite o email do patrocinador");
 			
-			usuario.setEmail(input.nextLine());
+			usuario.getUsuario().setEmail(input.nextLine());
 			
 		}
 		
@@ -73,8 +76,8 @@ public class Patrocinador extends Usuario {
 			
 			String string;
 			
-			string = "Id: " + this.idPatrocinador + "		Nome: " + usuario.getNome(); 
-			string += "		Empresa: " + this.empresa + "		E-mail: " + usuario.getEmail();
+			string = "Id: " + this.idPatrocinador + "		Nome: " + usuario.getUsuario().getNome(); 
+			string += "		Empresa: " + this.empresa + "		E-mail: " + usuario.getUsuario().getEmail();
 	
 			return string;
 			

@@ -1,54 +1,64 @@
+package sistema;
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Scanner;
+
+import data.UsuarioSingleton;
+
+//import data.UsuarioSingleton;
 
 public class Cliente extends Usuario {
 	
 	Scanner input = new Scanner(System.in);
 	
 	private int idCliente = 0;
+	UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 	
 	
-	List<Usuario> listaUsuarios = new ArrayList<Usuario>();
+	//singleton
+	//List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
 	public void criarCliente() {
-		
-		Usuario usuario = new Usuario();
+			
+		//singleton
+		//Usuario usuario = new Usuario();
+		//UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 		
 		String cpf;
 			
 		System.out.println("\nInsira os dados do cliente\n");
 		
 		System.out.println("Digite o nome");
-		usuario.setNome(input.nextLine());
+		usuario.getUsuario().setNome(input.nextLine());
 		
 		System.out.println("Digite a senha");
-		usuario.setSenha(input.nextLine()); 
+		usuario.getUsuario().setSenha(input.nextLine()); 
 		
 		System.out.println("Digite o cpf");
-		usuario.setCpf(input.nextLine());
+		usuario.getUsuario().setCpf(input.nextLine());
 		
-		while(TratamentoExcecao.isCPF(usuario.getCpf()) == false) {
+		while(TratamentoExcecao.isCPF(usuario.getUsuario().getCpf()) == false) {
 			
 			System.out.println("Digite o CPF na formatacao correta");
 			
-			usuario.setCpf(input.nextLine());
+			usuario.getUsuario().setCpf(input.nextLine());
 		}
 		
 
 		System.out.println("Digite o email");
-		usuario.setEmail(input.nextLine());
+		usuario.getUsuario().setEmail(input.nextLine());
 		
 		System.out.println("Digite a idade");
-		usuario.setIdade(TratamentoExcecao.lerInteiro()); 
+		usuario.getUsuario().setIdade(TratamentoExcecao.lerInteiro()); 
 		
 
-		listaUsuarios.add(usuario);
+		//pode ser um erro aqui
+		usuario.listaUsuarios.add(usuario.getUsuario());
 		
-		usuario.setId(idCliente);
+		usuario.getUsuario().setId(idCliente);
 		
 		idCliente++;
-		
 		
 		System.out.println("\nCliente adicionado com sucesso\n");
 		
@@ -64,18 +74,18 @@ public class Cliente extends Usuario {
 		
 		int indice = TratamentoExcecao.lerInteiro();
 		
-		if(listaUsuarios.isEmpty()) {
+		if(usuario.listaUsuarios.isEmpty()) {
 			System.out.println("Nenhum cliente cadastrado");
 		}
 		else {
 			
 			int flag = 0;
 			
-			for(int i = 0; i < listaUsuarios.size(); i++) {
+			for(int i = 0; i < usuario.listaUsuarios.size(); i++) {
 				
-				if(listaUsuarios.get(i).getId() == indice) {
+				if(usuario.listaUsuarios.get(i).getId() == indice) {
 					
-					listaUsuarios.remove(i);
+					usuario.listaUsuarios.remove(i);
 					flag = 1;
 					break;
 				}
@@ -106,7 +116,7 @@ public class Cliente extends Usuario {
 		
 		numero = TratamentoExcecao.lerInteiro();
 		
-		condicao = buscarUsuario(listaUsuarios, numero);
+		condicao = buscarUsuario(usuario.listaUsuarios, numero);
 		
 		if(condicao == -1) return;
 		
@@ -123,7 +133,7 @@ public class Cliente extends Usuario {
 		
 		if(opcao>0 && opcao <=5) {
 			
-			listaUsuarios.get(numero).modificarCliente(opcao);
+			usuario.listaUsuarios.get(numero).modificarCliente(opcao);
 			
 		}
 		else {
@@ -148,8 +158,8 @@ public class Cliente extends Usuario {
 		
 		if(opcao == 1) {
 			
-			for(int i = 0; i<listaUsuarios.size(); i++) {
-				System.out.println(listaUsuarios.get(i).toString());
+			for(int i = 0; i<usuario.listaUsuarios.size(); i++) {
+				System.out.println(usuario.listaUsuarios.get(i).toString());
 			}
 			
 		}
@@ -159,11 +169,11 @@ public class Cliente extends Usuario {
 			
 			numero = TratamentoExcecao.lerInteiro();
 			
-			indice = buscarUsuario(listaUsuarios, numero);
+			indice = buscarUsuario(usuario.listaUsuarios, numero);
 			if(indice == -1) return;
 			
 			
-			System.out.println(listaUsuarios.get(indice).toString());
+			System.out.println(usuario.listaUsuarios.get(indice).toString());
 			
 		}
 		else {

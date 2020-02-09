@@ -1,6 +1,11 @@
+package sistema;
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Scanner;
+
+import data.PromocaoSingleton;
+import data.UsuarioSingleton;
 
 public class Main {
 	
@@ -8,16 +13,21 @@ public class Main {
 	static int opcaoAdministrador, opcao, opcaoPatrocinador, opcaoRanking, opcaoPromocao, indiceJogo, indiceRanking;
 	static String login, senha;
 	static int idJogo = 0, idPatrocinador = 0, idRanking = 0, idPromocao = 0;
+	
+	//CASE 10
+	//CASE 8
 
 	public static void main(String[] args) {
 		
-		Cliente cliente = new Cliente();
+		//Cliente cliente = new Cliente();
 		
-		Usuario usuario = new Usuario();
+		UsuarioSingleton usuario = UsuarioSingleton.getInstance();
+		//UsuarioSingleton cliente = UsuarioSingleton.getInstance();
+		
+		PromocaoSingleton promocao = PromocaoSingleton.getInstance();
 		
 		List<Jogo> listaJogos = new ArrayList<Jogo>();
 		List<Jogo> listaRanking = new ArrayList<Jogo>();
-		List<Jogo> listaPromocoes = new ArrayList<Jogo>();
 		
 		List<Patrocinador> listaPatrocinadores = new ArrayList<Patrocinador>();
 		
@@ -34,19 +44,19 @@ public class Main {
 			
 			senha = input.nextLine();
 			
-			if(!usuario.verificarLogin(login) && usuario.verificarSenha(senha)) {
+			if(!usuario.getUsuario().verificarLogin(login) && usuario.getUsuario().verificarSenha(senha)) {
 				System.out.println("Login incorreto");
 			}
-			else if(usuario.verificarLogin(login) && !usuario.verificarSenha(senha)) {
+			else if(usuario.getUsuario().verificarLogin(login) && !usuario.getUsuario().verificarSenha(senha)) {
 				System.out.println("Senha incorreta");
 			}
-			else if(!(usuario.verificarLogin(login) && usuario.verificarSenha(senha))) {
+			else if(!(usuario.getUsuario().verificarLogin(login) && usuario.getUsuario().verificarSenha(senha))) {
 				System.out.println("Login e senha incorretos");
 			}
 			
 			
 		}
-		while(!(usuario.verificarLogin(login) && usuario.verificarSenha(senha))); 
+		while(!(usuario.getUsuario().verificarLogin(login) && usuario.getUsuario().verificarSenha(senha))); 
 		
 		
 		
@@ -64,27 +74,27 @@ public class Main {
 			
 				case 1: 
 					
-					cliente.criarCliente();
+					usuario.getCliente().criarCliente();
 						
 					break;
 					
 					
 				case 2:
 					
-					cliente.removerCliente();
+					usuario.getCliente().removerCliente();
 			
 					break;
 				
 					
 				case 3: 
 					
-					cliente.editarCliente();
+					usuario.getCliente().editarCliente();
 					
 					break;
 					
 				case 4:
 					
-					cliente.buscarCliente();
+					usuario.getCliente().buscarCliente();
 					
 					break;
 					
@@ -115,8 +125,6 @@ public class Main {
 					
 				case 8:
 					
-					Promocoes promocao = new Promocoes();
-					
 					System.out.println("Digite uma opção");
 					
 					System.out.println("1 - Adicionar jogo na promoções");
@@ -136,15 +144,15 @@ public class Main {
 						
 						if(aux == -1) break;
 						
-						promocao.setNome(listaJogos.get(indiceJogo).getNome());
-						promocao.setGenero(listaJogos.get(indiceJogo).getGenero());
+						promocao.getPromocao().setNome(listaJogos.get(indiceJogo).getNome());
+						promocao.getPromocao().setGenero(listaJogos.get(indiceJogo).getGenero());
 					
 							
-						promocao.adicionar();
+						promocao.getPromocao().adicionar();
 						
-						listaPromocoes.add(promocao);
+						promocao.listaPromocoes.add(promocao.getPromocao());
 						
-						promocao.setId(idPromocao);
+						promocao.getPromocao().setId(idPromocao);
 						
 						idPromocao++;
 						
@@ -152,14 +160,14 @@ public class Main {
 					}
 					else if(opcaoPromocao == 2) {
 						
-						promocao.remover(listaPromocoes);
+						promocao.getPromocao().remover(promocao.listaPromocoes);
 						
 					}
 					else if(opcaoPromocao == 3) {
 						
-						for(int i = 0; i<listaPromocoes.size(); i++) {
+						for(int i = 0; i<promocao.listaPromocoes.size(); i++) {
 							
-							System.out.println(listaPromocoes.get(i).toRank());
+							System.out.println(promocao.listaPromocoes.get(i).toRank());
 								
 						}
 						
