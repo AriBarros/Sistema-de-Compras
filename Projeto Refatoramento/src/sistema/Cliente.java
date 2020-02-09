@@ -48,11 +48,10 @@ public class Cliente extends Usuario {
 		System.out.println("Digite a idade");
 		usuario.getUsuario().setIdade(TratamentoExcecao.lerInteiro()); 
 		
-		
 		usuario.getUsuario().setId(idCliente);
-
+		
 		usuario.listaUsuarios.add(usuario.getUsuario());
-				
+		
 		idCliente++;
 		
 		System.out.println("\nCliente adicionado com sucesso\n");

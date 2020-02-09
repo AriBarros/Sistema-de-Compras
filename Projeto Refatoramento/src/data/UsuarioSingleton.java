@@ -12,8 +12,7 @@ public class UsuarioSingleton {
 	private static UsuarioSingleton single_instance = null;
 	public List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
-	Usuario usuario = new Cliente();
-	
+	static Usuario usuario = new Cliente();
 	
 	private UsuarioSingleton() { 
 	        
@@ -21,7 +20,7 @@ public class UsuarioSingleton {
 	
 	public static UsuarioSingleton getInstance() {
 
-		if (single_instance == null) {
+		if (single_instance == null && usuario == null) {
 			single_instance = new UsuarioSingleton();
 		}
 		return single_instance;
