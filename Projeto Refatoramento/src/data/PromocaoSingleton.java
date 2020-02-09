@@ -6,7 +6,7 @@ import java.util.List;
 import sistema.Cliente;
 import sistema.Jogo;
 import sistema.Promocoes;
-import sistema.Usuario;
+import usuario.Usuario;
 
 public class PromocaoSingleton {
 	

@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import data.UsuarioSingleton;
+import usuario.Usuario;
 
 public class Patrocinador extends Usuario {
 
@@ -13,7 +14,8 @@ public class Patrocinador extends Usuario {
 		
 		UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 		
-		public void adicionarPatrocinador() {
+		@Override
+		public void adicionar() {
 			
 			System.out.println("Digite o nome do patrocinador");
 			

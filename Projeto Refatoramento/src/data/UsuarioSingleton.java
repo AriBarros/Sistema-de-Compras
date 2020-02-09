@@ -4,14 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sistema.Cliente;
-import sistema.Usuario;
+import sistema.Patrocinador;
+import usuario.Usuario;
 
 public class UsuarioSingleton {
 
 	private static UsuarioSingleton single_instance = null;
 	public List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	
-	Usuario usuario = new Usuario();
+	Usuario usuario = new Cliente();
+	
 	
 	private UsuarioSingleton() { 
 	        
@@ -33,7 +35,7 @@ public class UsuarioSingleton {
 
 	public void setUsuario() {
 		
-		Usuario usuario1 = new Usuario();
+		Usuario usuario1 = new Cliente();
 		this.usuario = usuario1;
 		
 	}

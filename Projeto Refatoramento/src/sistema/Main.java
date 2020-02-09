@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import data.PromocaoSingleton;
 import data.UsuarioSingleton;
+import usuario.Usuario;
 
 public class Main {
 	
@@ -14,13 +15,13 @@ public class Main {
 	static String login, senha;
 	static int idJogo = 0, idPatrocinador = 0, idRanking = 0, idPromocao = 0;
 	
-	//CASE 10
-	//CASE 8
 
 	public static void main(String[] args) {
 		
 		Cliente cliente = new Cliente();
 		
+		
+		//Padrão Singleton
 		UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 		PromocaoSingleton promocao = PromocaoSingleton.getInstance();
 		
@@ -60,7 +61,7 @@ public class Main {
 		
 		while(true) {
 			
-			//Instanciando aqui pois deve instanciar para acessar a funÃ§Ã£o, se nÃ£o sobrescreve nos outros ids
+			//Instanciando aqui pois deve instanciar para acessar a função, se não sobrescreve nos outros ids
 			Jogo jogo = new Jogo();
 			
 			menu();
@@ -71,7 +72,7 @@ public class Main {
 			
 				case 1: 
 					
-					cliente.criarCliente();
+					cliente.adicionar();
 						
 					break;
 					
@@ -234,7 +235,8 @@ public class Main {
 								
 				case 10:
 					
-					Patrocinador patrocinador = new Patrocinador();
+					Usuario patrocinador = new Patrocinador();
+					Patrocinador patrocinador1 = new Patrocinador();
 					
 					System.out.println("Digite uma opção");
 					
@@ -248,9 +250,9 @@ public class Main {
 					if(opcaoPatrocinador == 1) {
 						
 						
-						patrocinador.adicionarPatrocinador();
+						patrocinador.adicionar();
 						
-						listaPatrocinadores.add(patrocinador);
+						listaPatrocinadores.add((Patrocinador) patrocinador);
 						
 						patrocinador.setId(idPatrocinador);
 						
@@ -261,7 +263,7 @@ public class Main {
 					}
 					else if(opcaoPatrocinador == 2) {
 						
-						patrocinador.removerPatrocinador(listaPatrocinadores);
+						patrocinador1.removerPatrocinador(listaPatrocinadores);
 						
 						
 					}

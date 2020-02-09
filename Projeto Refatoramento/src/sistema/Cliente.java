@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import data.UsuarioSingleton;
+import usuario.Usuario;
 
 //import data.UsuarioSingleton;
 
@@ -15,8 +16,8 @@ public class Cliente extends Usuario {
 	private int idCliente = 0;
 	UsuarioSingleton usuario = UsuarioSingleton.getInstance();
 	
-	
-	public void criarCliente() {
+	@Override
+	public void adicionar() {
 		
 		usuario.setUsuario();
 				
@@ -50,7 +51,6 @@ public class Cliente extends Usuario {
 		
 		usuario.getUsuario().setId(idCliente);
 
-		//pode ser um erro aqui
 		usuario.listaUsuarios.add(usuario.getUsuario());
 				
 		idCliente++;
@@ -128,7 +128,7 @@ public class Cliente extends Usuario {
 		
 		if(opcao>0 && opcao <=5) {
 			
-			usuario.listaUsuarios.get(numero).modificarCliente(opcao);
+			usuario.listaUsuarios.get(numero).modificarCliente(opcao, usuario.listaUsuarios.get(numero));
 			
 		}
 		else {

@@ -1,10 +1,12 @@
-package sistema;
+package usuario;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Usuario {
+import sistema.TratamentoExcecao;
+
+public abstract class Usuario {
 	
 	private int id = 0;
 	private String nome;
@@ -14,6 +16,10 @@ public class Usuario {
 	private int idade;
 	
 	static Scanner input = new Scanner(System.in);
+	
+	
+	public abstract void adicionar(); 
+		
 	
 	public boolean verificarLogin(String login) {
 		
@@ -68,81 +74,11 @@ public class Usuario {
 		
 	}
 	
-	public void modificarCliente(int opcao) {
+	public void modificarCliente(int opcao, Usuario usuario) {
 		
-		switch(opcao) {
+		UsuarioContexto usuarioContexto = new UsuarioContexto();
 		
-		case 1:
-			
-			System.out.println("Digite o nome do cliente");
-		
-			String nome = input.nextLine();
-			
-			setNome(nome);
-			
-			System.out.println("\nNome do cliente alterado com sucesso!\n");
-			
-			break;
-		
-		
-		case 2:
-			
-			System.out.println("Digite a nova senha do cliente");
-		
-			String senha = input.nextLine();
-			
-			setSenha(senha);
-			
-			System.out.println("\nSenha do cliente alterada com sucesso!\n");
-			
-			break;
-		
-		case 3:
-			
-			System.out.println("Digite o CPF do cliente");
-			
-			String cpf = input.nextLine();
-			
-			while(TratamentoExcecao.isCPF(cpf) == false) {
-				
-				System.out.println("Digite o CPF na formatacao correta");
-				
-				cpf = input.nextLine();
-				
-			}
-			
-			setCpf(cpf);
-		
-			System.out.println("\nCPF do cliente alterado com sucesso!\n");
-		
-			break;
-			
-		case 4:
-			
-			System.out.println("Digite o e-mail do cliente");
-			
-			String email = input.nextLine();
-			
-			setEmail(email);
-			
-			System.out.println("\nE-mail do cliente alterado com sucesso!\n");
-		
-			break;
-			
-		case 5:
-			
-			System.out.println("Digite a idade do cliente");
-			
-			int idade = TratamentoExcecao.lerInteiro();
-			
-			setIdade(idade);
-			
-			System.out.println("\nIdade do cliente alterada com sucesso");
-			
-			break;
-			
-		}
-		
+		usuarioContexto.startUsuarioStrategy(opcao, usuario);
 		
 	}
 	
